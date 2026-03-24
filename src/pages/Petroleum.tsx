@@ -2,8 +2,11 @@ import React from "react";
 import { motion } from "motion/react";
 import { Flame, Droplets, Truck, Ship } from "lucide-react";
 import { fadeUp } from "../utils/animations";
+import { useLanguage } from "../i18n/LanguageContext";
 
 export default function Petroleum() {
+  const { t } = useLanguage();
+
   const partners = [
     "РусНефть",
     "Газпром",
@@ -30,7 +33,7 @@ export default function Petroleum() {
       `}</style>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12">
-        <motion.div 
+        <motion.div
           initial="hidden"
           animate="visible"
           variants={fadeUp}
@@ -39,21 +42,18 @@ export default function Petroleum() {
           <div className="flex items-center justify-center md:justify-start space-x-4 mb-4">
             <div className="h-[1px] w-12 bg-[#C5A059]"></div>
             <span className="text-[#C5A059] uppercase tracking-[0.2em] text-sm font-semibold">
-              Направление
+              {t("petroleum.badge")}
             </span>
           </div>
           <h1 className="text-3xl sm:text-4xl md:text-6xl font-serif font-bold text-[#0B1221] tracking-tight mb-6">
-            Нефтепродукты
+            {t("nav.petroleum")}
           </h1>
           <p className="text-base sm:text-lg text-gray-600 max-w-3xl font-light mx-auto md:mx-0">
-            Прямые поставки высококачественных углеводородов с соблюдением
-            строгих международных стандартов безопасности и логистики.
+            {t("petroleum.lead")}
           </p>
         </motion.div>
 
-        {/* Bento Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[320px] mb-32">
-          {/* Item 1: Gas (Large) */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -63,7 +63,7 @@ export default function Petroleum() {
           >
             <img
               src="/gas.jpg"
-              alt="Gas storage facilities - Газовые хранилища"
+              alt={t("petroleum.alt.gas")}
               className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700 ease-out"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0B1221] via-[#0B1221]/40 to-transparent"></div>
@@ -72,16 +72,14 @@ export default function Petroleum() {
                 <Flame className="w-6 h-6 text-[#0B1221]" />
               </div>
               <h3 className="text-3xl font-serif font-bold text-white mb-3 tracking-tight">
-                Газ
+                {t("petroleum.gas.title")}
               </h3>
               <p className="text-gray-300 font-light max-w-md">
-                Сжиженный и природный газ высшего качества для промышленных
-                нужд.
+                {t("petroleum.gas.desc")}
               </p>
             </div>
           </motion.div>
 
-          {/* Item 2: Petrol */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -94,16 +92,14 @@ export default function Petroleum() {
             </div>
             <div>
               <h3 className="text-2xl font-bold text-[#0B1221] mb-3 tracking-tight">
-                Бензин
+                {t("petroleum.petrol.title")}
               </h3>
               <p className="text-gray-600 font-light">
-                Автомобильные бензины различных марок, соответствующие
-                стандартам Евро.
+                {t("petroleum.petrol.desc")}
               </p>
             </div>
           </motion.div>
 
-          {/* Item 3: Diesel */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -116,16 +112,14 @@ export default function Petroleum() {
             </div>
             <div>
               <h3 className="text-2xl font-bold text-[#0B1221] mb-3 tracking-tight">
-                Дизель
+                {t("petroleum.diesel.title")}
               </h3>
               <p className="text-gray-600 font-light">
-                Надежное дизельное топливо для любых климатических условий
-                эксплуатации.
+                {t("petroleum.diesel.desc")}
               </p>
             </div>
           </motion.div>
 
-          {/* Item 4: Oil Supply (Large) */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -135,7 +129,7 @@ export default function Petroleum() {
           >
             <img
               src="/neft.jpg"
-              alt="Tank wagons - Железнодорожные цистерны"
+              alt={t("petroleum.alt.tanks")}
               className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-105 transition-transform duration-700 ease-out"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-[#0B1221] via-[#0B1221]/40 to-transparent"></div>
@@ -144,24 +138,22 @@ export default function Petroleum() {
                 <Ship className="w-6 h-6 text-[#0B1221]" />
               </div>
               <h3 className="text-3xl font-serif font-bold text-white mb-3 tracking-tight">
-                Поставка нефти
+                {t("petroleum.crude.title")}
               </h3>
               <p className="text-gray-300 font-light max-w-md">
-                Сырая нефть напрямую с месторождений. Оптимизированная
-                логистика.
+                {t("petroleum.crude.desc")}
               </p>
             </div>
           </motion.div>
         </div>
 
-        {/* Partners Marquee */}
         <div className="mb-32">
           <div className="text-center mb-10">
             <h3 className="text-2xl md:text-3xl font-serif font-bold text-[#0B1221]">
-              Наши партнеры
+              {t("petroleum.partners.title")}
             </h3>
             <p className="text-gray-500 mt-2 font-light">
-              Ведущие предприятия нефтегазового сектора
+              {t("petroleum.partners.subtitle")}
             </p>
           </div>
           <div className="relative overflow-hidden w-full bg-white py-8 border-y border-gray-200 flex">
@@ -193,21 +185,20 @@ export default function Petroleum() {
           </div>
         </div>
 
-        {/* Infrastructure & Storage Gallery */}
         <div>
           <div className="mb-10">
             <h3 className="text-2xl md:text-3xl font-serif font-bold text-[#0B1221]">
-              Инфраструктура и хранение
+              {t("petroleum.infra.title")}
             </h3>
             <p className="text-gray-500 mt-2 font-light">
-              Современные мощности для безопасного хранения и транспортировки
+              {t("petroleum.infra.subtitle")}
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             <div className="h-64 rounded-sm overflow-hidden relative group">
               <img
                 src="/neft.jpg"
-                alt="Oil refinery"
+                alt={t("petroleum.alt.refinery")}
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors duration-500"></div>
@@ -215,7 +206,7 @@ export default function Petroleum() {
             <div className="h-64 rounded-sm overflow-hidden relative group">
               <img
                 src="https://images.unsplash.com/photo-1516937941344-00b4e0337589?q=80&w=2070&auto=format&fit=crop"
-                alt="Industrial pipes"
+                alt={t("petroleum.alt.pipes")}
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
               />
 
@@ -224,7 +215,7 @@ export default function Petroleum() {
             <div className="h-64 rounded-sm overflow-hidden relative group md:col-span-2 lg:col-span-1">
               <img
                 src="/neft.png"
-                alt="Freight wagons"
+                alt={t("petroleum.alt.wagons")}
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors duration-500"></div>

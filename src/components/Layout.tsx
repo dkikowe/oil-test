@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router';
 import { motion, AnimatePresence } from 'motion/react';
 import { Menu, X, Phone, Globe, ChevronDown } from 'lucide-react';
+import { MessagingIconRow, PHONE_PRIMARY_TEL, PHONE_SECONDARY_TEL } from './MessagingLinks';
 import { useLanguage } from '../i18n/LanguageContext';
 import { Language } from '../i18n/translations';
 
@@ -58,9 +59,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <div className="flex justify-between items-center">
             {/* Logo */}
             <Link to="/" className="flex items-center group">
-              <span className="text-xl md:text-2xl font-bold tracking-tighter text-white">
-                EOA<span className="text-[#C5A059] ml-1">GROUP</span>
-              </span>
+              <img src="/logo.jpeg" alt="EOA GROUP" className="h-12 md:h-16 w-auto object-contain mix-blend-screen bg-white rounded-sm p-1" />
             </Link>
 
             {/* Desktop Nav */}
@@ -117,14 +116,17 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 </AnimatePresence>
               </div>
 
-              {/* Contact Button */}
-              <a
-                href="tel:+77777771778"
-                className="group flex items-center space-x-2 bg-white/5 hover:bg-[#C5A059] border border-white/10 hover:border-[#C5A059] text-white px-6 py-2.5 rounded-sm transition-all duration-300"
-              >
-                <Phone className="w-4 h-4" />
-                <span className="text-sm font-medium tracking-wide">{t('header.phone')}</span>
-              </a>
+              {/* Phone + WhatsApp + Telegram */}
+              <div className="flex items-center gap-2">
+                <a
+                  href={`tel:${PHONE_PRIMARY_TEL.replace(/\s/g, '')}`}
+                  className="group flex items-center space-x-2 bg-white/5 hover:bg-[#C5A059] border border-white/10 hover:border-[#C5A059] text-white px-4 py-2.5 rounded-sm transition-all duration-300"
+                >
+                  <Phone className="w-4 h-4 shrink-0" />
+                  <span className="text-sm font-medium tracking-wide whitespace-nowrap">{t('header.phone')}</span>
+                </a>
+                <MessagingIconRow phoneE164={PHONE_PRIMARY_TEL} iconClassName="w-[18px] h-[18px]" />
+              </div>
             </div>
 
             {/* Mobile Menu Toggle */}
@@ -168,6 +170,17 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                     </button>
                   ))}
                 </div>
+
+                <div className="flex flex-col items-center gap-3 pt-6 border-t border-white/10 w-full">
+                  <a
+                    href={`tel:${PHONE_PRIMARY_TEL.replace(/\s/g, '')}`}
+                    className="inline-flex items-center gap-2 text-white text-sm font-medium"
+                  >
+                    <Phone className="w-4 h-4 text-[#C5A059]" />
+                    {t('header.phone')}
+                  </a>
+                  <MessagingIconRow phoneE164={PHONE_PRIMARY_TEL} />
+                </div>
               </div>
             </motion.div>
           )}
@@ -184,12 +197,24 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12">
           <div className="flex flex-col md:flex-row justify-between items-center md:items-start text-center md:text-left mb-16">
             <div className="mb-8 md:mb-0 flex flex-col items-center md:items-start">
-              <span className="text-xl md:text-2xl font-bold tracking-tighter text-white block mb-2">
-                EOA<span className="text-[#C5A059] ml-1">GROUP</span>
-              </span>
+              <img src="/logo.jpeg" alt="EOA GROUP" className="h-16 w-auto object-contain mix-blend-screen bg-white rounded-sm p-1 mb-4" />
               <p className="text-gray-500 font-light text-sm max-w-xs">
                 {t('footer.desc')}
               </p>
+              <div className="mt-6 flex flex-col gap-3 text-sm">
+                <div className="flex flex-wrap items-center justify-center md:justify-start gap-2 text-gray-400">
+                  <a href={`tel:${PHONE_PRIMARY_TEL}`} className="hover:text-white transition-colors">
+                    {t('header.phone')}
+                  </a>
+                  <MessagingIconRow phoneE164={PHONE_PRIMARY_TEL} iconClassName="w-4 h-4" />
+                </div>
+                <div className="flex flex-wrap items-center justify-center md:justify-start gap-2 text-gray-400">
+                  <a href={`tel:${PHONE_SECONDARY_TEL}`} className="hover:text-white transition-colors">
+                    {t('header.phone2')}
+                  </a>
+                  <MessagingIconRow phoneE164={PHONE_SECONDARY_TEL} iconClassName="w-4 h-4" />
+                </div>
+              </div>
             </div>
             
             <div className="flex flex-wrap justify-center gap-4 md:gap-8">

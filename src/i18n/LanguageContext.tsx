@@ -24,10 +24,13 @@ export const LanguageProvider: React.FC<{ children: ReactNode }> = ({ children }
     return text;
   };
 
-  // Add dir attribute for Farsi (RTL)
   React.useEffect(() => {
     document.documentElement.dir = language === 'FA' ? 'rtl' : 'ltr';
-    document.documentElement.lang = language.toLowerCase();
+    document.documentElement.lang =
+      language === 'KZ' ? 'kk' : language === 'FA' ? 'fa' : language.toLowerCase();
+    const title =
+      translations[language]['meta.title'] || translations.RU['meta.title'];
+    if (title) document.title = title;
   }, [language]);
 
   return (

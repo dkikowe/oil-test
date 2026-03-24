@@ -2,207 +2,536 @@ export type Language = 'KZ' | 'RU' | 'EN' | 'FA';
 
 export const translations: Record<Language, Record<string, string>> = {
   RU: {
-    // Navigation
+    'meta.title': 'EOA GROUP — экспорт нефтепродуктов и агропродукции',
     'nav.home': 'Главная',
     'nav.petroleum': 'Нефтепродукты',
     'nav.agro': 'Агропромышленность',
     'nav.contact': 'Контакты',
-    
-    // Header/Footer
     'header.phone': '+7 777 777 17 78',
+    'header.phone2': '+7 707 398 88 88',
     'footer.desc': 'Глобальные поставки энергоресурсов и агропродукции.',
     'footer.rights': '© {year} EOA GROUP. Все права защищены.',
     'footer.privacy': 'Политика конфиденциальности',
     'footer.terms': 'Условия использования',
-
-    // Home - Hero
+    'aria.whatsapp': 'WhatsApp',
+    'aria.telegram': 'Telegram',
     'home.hero.subtitle': 'Международная торговля',
     'home.hero.title1': 'Связующее звено',
     'home.hero.title2': 'мировых рынков',
-    'home.hero.desc': 'EOA GROUP — ваш стратегический партнер. Мы обеспечиваем надежный экспорт нефтепродуктов и сельскохозяйственных товаров, соединяя производителей и потребителей по всему миру.',
+    'home.hero.desc':
+      'EOA GROUP — ваш стратегический партнер. Мы обеспечиваем надежный экспорт нефтепродуктов и сельскохозяйственных товаров, соединяя производителей и потребителей по всему миру.',
     'home.hero.btn': 'Сотрудничество',
-
-    // Home - About
     'home.about.title': 'О компании EOA GROUP',
-    'home.about.p1': 'Мы специализируемся на крупнооптовых поставках сырья и продовольствия. Наша миссия — гарантировать бесперебойность цепочек поставок для промышленных и государственных предприятий в странах СНГ, Ближнего Востока и Азии.',
-    'home.about.p2': 'Благодаря прямым контрактам с крупнейшими производителями (такими как Газпром, KazMunayGas, CNPC) и собственной логистической экспертизе, мы предлагаем оптимальные цены и точные сроки поставок.',
-    
-    // Home - Stats
+    'home.about.p1':
+      'Мы специализируемся на крупнооптовых поставках сырья и продовольствия. Наша миссия — гарантировать бесперебойность цепочек поставок для промышленных и государственных предприятий в странах СНГ, Ближнего Востока и Азии.',
+    'home.about.p2':
+      'Благодаря прямым контрактам с крупнейшими производителями (такими как Газпром, KazMunayGas, CNPC) и собственной логистической экспертизе, мы предлагаем оптимальные цены и точные сроки поставок.',
     'home.stats.countries': 'Стран экспорта',
     'home.stats.tons': 'Тонн продукции в год',
     'home.stats.quality': 'Гарантия качества',
     'home.stats.logistics': 'Логистический контроль',
-
-    // Home - Directions
     'home.dir.title': 'Наши направления',
-    'home.dir.desc': 'Два ключевых вектора, обеспечивающих энергетическую и продовольственную безопасность наших партнеров.',
+    'home.dir.desc':
+      'Два ключевых вектора, обеспечивающих энергетическую и продовольственную безопасность наших партнеров.',
     'home.dir.petroleum': 'Нефтепродукты',
-    'home.dir.petroleum.desc': 'Газ, бензин, дизель и сырая нефть. Прямые поставки от ведущих НПЗ с соблюдением всех стандартов.',
+    'home.dir.petroleum.desc':
+      'Газ, бензин, дизель и сырая нефть. Прямые поставки от ведущих НПЗ с соблюдением всех стандартов.',
     'home.dir.agro': 'Агропромышленность',
-    'home.dir.agro.desc': 'Зерновые культуры, мука, масла и сахар. Экспорт в страны Азии и Ближнего Востока.',
+    'home.dir.agro.desc':
+      'Зерновые культуры, мука, масла и сахар. Экспорт в страны Азии и Ближнего Востока.',
     'home.dir.more': 'Подробнее',
-
-    // Home - Advantages
     'home.adv.logistics': 'Глобальная логистика',
-    'home.adv.logistics.desc': 'Собственные и партнерские логистические цепочки (ЖД, море, авто) по всему миру.',
+    'home.adv.logistics.desc':
+      'Собственные и партнерские логистические цепочки (ЖД, море, авто) по всему миру.',
     'home.adv.quality': 'Контроль качества',
-    'home.adv.quality.desc': 'Строгий аудит каждой партии товара на соответствие международным стандартам.',
+    'home.adv.quality.desc':
+      'Строгий аудит каждой партии товара на соответствие международным стандартам.',
     'home.adv.contracts': 'Прямые контракты',
     'home.adv.contracts.desc': 'Работа без посредников с крупнейшими заводами и агрохолдингами.',
     'home.adv.reliability': 'Надежность',
-    'home.adv.reliability.desc': 'Безупречная финансовая и юридическая репутация на международных рынках.',
+    'home.adv.reliability.desc':
+      'Безупречная финансовая и юридическая репутация на международных рынках.',
+    'petroleum.badge': 'Направление',
+    'petroleum.lead':
+      'Прямые поставки высококачественных углеводородов с соблюдением строгих международных стандартов безопасности и логистики.',
+    'petroleum.gas.title': 'Газ',
+    'petroleum.gas.desc': 'Сжиженный и природный газ высшего качества для промышленных нужд.',
+    'petroleum.petrol.title': 'Бензин',
+    'petroleum.petrol.desc':
+      'Автомобильные бензины различных марок, соответствующие стандартам Евро.',
+    'petroleum.diesel.title': 'Дизель',
+    'petroleum.diesel.desc':
+      'Надежное дизельное топливо для любых климатических условий эксплуатации.',
+    'petroleum.crude.title': 'Поставка нефти',
+    'petroleum.crude.desc': 'Сырая нефть напрямую с месторождений. Оптимизированная логистика.',
+    'petroleum.partners.title': 'Наши партнеры',
+    'petroleum.partners.subtitle': 'Ведущие предприятия нефтегазового сектора',
+    'petroleum.infra.title': 'Инфраструктура и хранение',
+    'petroleum.infra.subtitle':
+      'Современные мощности для безопасного хранения и транспортировки',
+    'petroleum.alt.gas': 'Газовые хранилища',
+    'petroleum.alt.tanks': 'Железнодорожные цистерны',
+    'petroleum.alt.refinery': 'Нефтепереработка',
+    'petroleum.alt.pipes': 'Промышленные трубопроводы',
+    'petroleum.alt.wagons': 'Вагоны для перевозки нефти',
+    'agro.badge': 'Агросектор',
+    'agro.lead':
+      'Мы являемся крупнейшим экспортером сельскохозяйственной продукции: зерно, мука, подсолнечное масло и соя. Гарантируем высокое качество сырья, надёжное хранение и бесперебойную логистику на международные рынки.',
+    'agro.partners.title':
+      'Наши ключевые партнеры по зерну, муке, маслу и сое',
+    'agro.partners.subtitle': 'Лидеры агропромышленного комплекса',
+    'agro.grains.title': 'Экспорт зерна, муки и сои',
+    'agro.grains.p1':
+      'Мы предлагаем бесперебойные крупнооптовые поставки высококачественных зерновых культур. В нашем ассортименте — зерно всех сортов (3–4 класс), выращенное на экологически чистых полях.',
+    'agro.grains.p2':
+      'Также мы экспортируем пшеничную муку первого и второго сорта, которая идеально подходит для хлебопекарного и кондитерского производств. Вся продукция проходит строгий контроль качества и сертифицирована.',
+    'agro.grains.p3':
+      'Соя — крупнооптовые поставки бобов для переработки (масло, шрот, белок) и кормовой отрасли. Параметры качества и логистика согласовываем под контракт; направления — как у зерна (Иран, Афганистан, ОАЭ, Ирак и др.).',
+    'agro.soya.title': 'По сое мы обеспечиваем',
+    'agro.soya.li1': 'подбор партии под требования переработчика или трейдера;',
+    'agro.soya.li2': 'прозрачные условия по качеству и пробам до отгрузки;',
+    'agro.soya.li3':
+      'согласованные сроки и маршруты с учётом сезона и загрузки транспорта;',
+    'agro.soya.li4': 'поддержку на этапе контракта и отгрузки.',
+    'agro.grains.p4':
+      'Собственные элеваторы и специализированные вагоны-зерновозы позволяют нам обеспечивать идеальные условия хранения и транспортировки на любые расстояния.',
+    'agro.routes.title': 'Основные направления поставок:',
+    'agro.route.iran': 'Иран',
+    'agro.route.afghanistan': 'Афганистан',
+    'agro.route.uae': 'ОАЭ',
+    'agro.route.iraq': 'Ирак',
+    'agro.caption.fields': 'Экологически чистые поля',
+    'agro.caption.flour': 'Мука высших сортов',
+    'agro.caption.elevators': 'Современные элеваторы',
+    'agro.oils.title': 'Пищевые растительные масла',
+    'agro.oils.p1':
+      'Осуществляем крупнооптовые поставки рафинированного и нерафинированного подсолнечного масла высшего качества.',
+    'agro.oils.p2':
+      'Наша продукция проходит строгий лабораторный контроль на всех этапах производства и розлива, что делает её идеальным выбором как для пищевой промышленности, так и для дистрибуции в розничные сети.',
+    'agro.oil.f1': 'Соответствие международным стандартам качества (Халал, ГОСТ)',
+    'agro.oil.f2': 'Прямые поставки с ведущих маслоэкстракционных заводов',
+    'agro.oil.f3': 'Оптимизированная логистика в страны Ближнего Востока и Азии',
+    'agro.alt.fields': 'Пшеничные поля',
+    'agro.alt.flour': 'Пшеничная мука',
+    'agro.alt.elevator': 'Зерновые элеваторы',
+    'agro.alt.sunflower': 'Подсолнечное масло',
+    'agro.alt.oilbulk': 'Растительное масло оптом',
+    'agro.alt.oilsupply': 'Поставка масла',
+    'contact.badge': 'Связь с нами',
+    'contact.title': 'Контакты',
+    'contact.intro':
+      'Готовы обсудить условия сотрудничества? Оставьте заявку, и наши специалисты свяжутся с вами.',
+    'contact.office': 'Офис',
+    'contact.address.line1': 'Достык 20, г. Астана',
+    'contact.address.line2': 'Казахстан',
+    'contact.phones': 'Телефоны',
+    'contact.email': 'Email',
+    'contact.form.name': 'Ваше имя / Компания',
+    'contact.form.namePh': 'Введите данные',
+    'contact.form.phone': 'Телефон',
+    'contact.form.phonePh': '+7 (___) ___ __ __',
+    'contact.form.product': 'Интересующая продукция',
+    'contact.form.opt.petroleum': 'Нефтепродукты',
+    'contact.form.opt.agro': 'Агропромышленность',
+    'contact.form.opt.other': 'Другое',
+    'contact.form.submit': 'Отправить заявку',
   },
   EN: {
-    // Navigation
+    'meta.title': 'EOA GROUP — petroleum and agricultural exports',
     'nav.home': 'Home',
     'nav.petroleum': 'Petroleum',
     'nav.agro': 'Agriculture',
     'nav.contact': 'Contacts',
-    
-    // Header/Footer
     'header.phone': '+7 777 777 17 78',
+    'header.phone2': '+7 707 398 88 88',
     'footer.desc': 'Global supplies of energy resources and agricultural products.',
     'footer.rights': '© {year} EOA GROUP. All rights reserved.',
     'footer.privacy': 'Privacy Policy',
     'footer.terms': 'Terms of Use',
-
-    // Home - Hero
+    'aria.whatsapp': 'WhatsApp',
+    'aria.telegram': 'Telegram',
     'home.hero.subtitle': 'International Trade',
     'home.hero.title1': 'Connecting',
     'home.hero.title2': 'global markets',
-    'home.hero.desc': 'EOA GROUP is your strategic partner. We ensure reliable export of petroleum products and agricultural goods, connecting producers and consumers worldwide.',
+    'home.hero.desc':
+      'EOA GROUP is your strategic partner. We ensure reliable export of petroleum products and agricultural goods, connecting producers and consumers worldwide.',
     'home.hero.btn': 'Cooperation',
-
-    // Home - About
     'home.about.title': 'About EOA GROUP',
-    'home.about.p1': 'We specialize in large-scale wholesale supplies of raw materials and food. Our mission is to guarantee uninterrupted supply chains for industrial and state enterprises in the CIS, Middle East, and Asia.',
-    'home.about.p2': 'Thanks to direct contracts with major producers (such as Gazprom, KazMunayGas, CNPC) and our own logistics expertise, we offer optimal prices and precise delivery times.',
-    
-    // Home - Stats
+    'home.about.p1':
+      'We specialize in large-scale wholesale supplies of raw materials and food. Our mission is to guarantee uninterrupted supply chains for industrial and state enterprises in the CIS, Middle East, and Asia.',
+    'home.about.p2':
+      'Thanks to direct contracts with major producers (such as Gazprom, KazMunayGas, CNPC) and our own logistics expertise, we offer optimal prices and precise delivery times.',
     'home.stats.countries': 'Export Countries',
     'home.stats.tons': 'Tons per year',
     'home.stats.quality': 'Quality Guarantee',
     'home.stats.logistics': 'Logistics Control',
-
-    // Home - Directions
     'home.dir.title': 'Our Directions',
     'home.dir.desc': 'Two key vectors ensuring energy and food security for our partners.',
     'home.dir.petroleum': 'Petroleum Products',
-    'home.dir.petroleum.desc': 'Gas, gasoline, diesel, and crude oil. Direct supplies from leading refineries in compliance with all standards.',
+    'home.dir.petroleum.desc':
+      'Gas, gasoline, diesel, and crude oil. Direct supplies from leading refineries in compliance with all standards.',
     'home.dir.agro': 'Agriculture',
     'home.dir.agro.desc': 'Grains, flour, oils, and sugar. Export to countries in Asia and the Middle East.',
     'home.dir.more': 'Learn More',
-
-    // Home - Advantages
     'home.adv.logistics': 'Global Logistics',
-    'home.adv.logistics.desc': 'Own and partner logistics chains (railway, sea, auto) worldwide.',
+    'home.adv.logistics.desc':
+      'Own and partner logistics chains (railway, sea, auto) worldwide.',
     'home.adv.quality': 'Quality Control',
-    'home.adv.quality.desc': 'Strict audit of each batch of goods for compliance with international standards.',
+    'home.adv.quality.desc':
+      'Strict audit of each batch of goods for compliance with international standards.',
     'home.adv.contracts': 'Direct Contracts',
-    'home.adv.contracts.desc': 'Working without intermediaries with major factories and agricultural holdings.',
+    'home.adv.contracts.desc':
+      'Working without intermediaries with major factories and agricultural holdings.',
     'home.adv.reliability': 'Reliability',
-    'home.adv.reliability.desc': 'Impeccable financial and legal reputation in international markets.',
+    'home.adv.reliability.desc':
+      'Impeccable financial and legal reputation in international markets.',
+    'petroleum.badge': 'Business line',
+    'petroleum.lead':
+      'Direct supplies of high-quality hydrocarbons with strict international safety and logistics standards.',
+    'petroleum.gas.title': 'Gas',
+    'petroleum.gas.desc': 'LNG and natural gas of the highest grade for industrial use.',
+    'petroleum.petrol.title': 'Gasoline',
+    'petroleum.petrol.desc': 'Automotive gasoline grades meeting Euro standards.',
+    'petroleum.diesel.title': 'Diesel',
+    'petroleum.diesel.desc': 'Reliable diesel fuel for all climate and operating conditions.',
+    'petroleum.crude.title': 'Crude oil supply',
+    'petroleum.crude.desc': 'Crude oil directly from fields. Optimized logistics.',
+    'petroleum.partners.title': 'Our partners',
+    'petroleum.partners.subtitle': 'Leading companies in oil and gas',
+    'petroleum.infra.title': 'Infrastructure and storage',
+    'petroleum.infra.subtitle': 'Modern facilities for safe storage and transport',
+    'petroleum.alt.gas': 'Gas storage facilities',
+    'petroleum.alt.tanks': 'Rail tank cars',
+    'petroleum.alt.refinery': 'Oil refinery',
+    'petroleum.alt.pipes': 'Industrial pipelines',
+    'petroleum.alt.wagons': 'Freight wagons for oil',
+    'agro.badge': 'Agribusiness',
+    'agro.lead':
+      'We are a major exporter of agricultural products: grain, flour, sunflower oil, and soybeans. We guarantee high raw material quality, reliable storage, and seamless logistics to international markets.',
+    'agro.partners.title': 'Key partners in grain, flour, oil, and soybeans',
+    'agro.partners.subtitle': 'Leaders in the agro-industrial sector',
+    'agro.grains.title': 'Export of grain, flour, and soybeans',
+    'agro.grains.p1':
+      'We offer uninterrupted wholesale supplies of high-quality grains. Our range includes all grades (classes 3–4) grown in environmentally clean fields.',
+    'agro.grains.p2':
+      'We also export first- and second-grade wheat flour, ideal for bakery and confectionery. All products undergo strict quality control and certification.',
+    'agro.grains.p3':
+      'Soybeans — wholesale beans for processing (oil, meal, protein) and feed. Quality and logistics are agreed per contract; destinations mirror grain (Iran, Afghanistan, UAE, Iraq, and more).',
+    'agro.soya.title': 'For soybeans we provide',
+    'agro.soya.li1': 'batch selection to match processor or trader requirements;',
+    'agro.soya.li2': 'transparent quality and sampling terms before shipment;',
+    'agro.soya.li3': 'aligned timelines and routes accounting for season and transport capacity;',
+    'agro.soya.li4': 'support through contracting and shipment.',
+    'agro.grains.p4':
+      'Our own elevators and specialized grain hopper cars ensure ideal storage and transport over any distance.',
+    'agro.routes.title': 'Main supply destinations:',
+    'agro.route.iran': 'Iran',
+    'agro.route.afghanistan': 'Afghanistan',
+    'agro.route.uae': 'UAE',
+    'agro.route.iraq': 'Iraq',
+    'agro.caption.fields': 'Environmentally clean fields',
+    'agro.caption.flour': 'Premium flour grades',
+    'agro.caption.elevators': 'Modern elevators',
+    'agro.oils.title': 'Edible vegetable oils',
+    'agro.oils.p1':
+      'We supply refined and unrefined sunflower oil in bulk at the highest quality.',
+    'agro.oils.p2':
+      'Products undergo strict laboratory control at every stage of production and bottling — ideal for food industry and retail distribution.',
+    'agro.oil.f1': 'Compliance with international quality standards (Halal, GOST)',
+    'agro.oil.f2': 'Direct supplies from leading oil extraction plants',
+    'agro.oil.f3': 'Optimized logistics to the Middle East and Asia',
+    'agro.alt.fields': 'Wheat fields',
+    'agro.alt.flour': 'Wheat flour',
+    'agro.alt.elevator': 'Grain elevators',
+    'agro.alt.sunflower': 'Sunflower oil',
+    'agro.alt.oilbulk': 'Vegetable oil wholesale',
+    'agro.alt.oilsupply': 'Oil supply',
+    'contact.badge': 'Get in touch',
+    'contact.title': 'Contacts',
+    'contact.intro':
+      'Ready to discuss cooperation? Leave a request and our team will contact you.',
+    'contact.office': 'Office',
+    'contact.address.line1': 'Dostyk 20, Astana',
+    'contact.address.line2': 'Kazakhstan',
+    'contact.phones': 'Phones',
+    'contact.email': 'Email',
+    'contact.form.name': 'Your name / Company',
+    'contact.form.namePh': 'Enter details',
+    'contact.form.phone': 'Phone',
+    'contact.form.phonePh': '+7 (___) ___ __ __',
+    'contact.form.product': 'Product of interest',
+    'contact.form.opt.petroleum': 'Petroleum products',
+    'contact.form.opt.agro': 'Agriculture',
+    'contact.form.opt.other': 'Other',
+    'contact.form.submit': 'Send request',
   },
   KZ: {
-    // Navigation
+    'meta.title': 'EOA GROUP — мұнай өнімдері мен агроөнім экспорты',
     'nav.home': 'Басты бет',
     'nav.petroleum': 'Мұнай өнімдері',
     'nav.agro': 'Агроөнеркәсіп',
     'nav.contact': 'Байланыс',
-    
-    // Header/Footer
     'header.phone': '+7 777 777 17 78',
+    'header.phone2': '+7 707 398 88 88',
     'footer.desc': 'Энергия ресурстары мен агроөнімдерді жаһандық жеткізу.',
     'footer.rights': '© {year} EOA GROUP. Барлық құқықтар қорғалған.',
     'footer.privacy': 'Құпиялылық саясаты',
     'footer.terms': 'Пайдалану шарттары',
-
-    // Home - Hero
+    'aria.whatsapp': 'WhatsApp',
+    'aria.telegram': 'Telegram',
     'home.hero.subtitle': 'Халықаралық сауда',
     'home.hero.title1': 'Әлемдік нарықтарды',
     'home.hero.title2': 'байланыстырушы',
-    'home.hero.desc': 'EOA GROUP — сіздің стратегиялық серіктесіңіз. Біз өндірушілер мен тұтынушыларды бүкіл әлем бойынша байланыстыра отырып, мұнай өнімдері мен ауыл шаруашылығы тауарларының сенімді экспортын қамтамасыз етеміз.',
+    'home.hero.desc':
+      'EOA GROUP — сіздің стратегиялық серіктесіңіз. Біз өндірушілер мен тұтынушыларды бүкіл әлем бойынша байланыстыра отырып, мұнай өнімдері мен ауыл шаруашылығы тауарларының сенімді экспортын қамтамасыз етеміз.',
     'home.hero.btn': 'Ынтымақтастық',
-
-    // Home - About
     'home.about.title': 'EOA GROUP компаниясы туралы',
-    'home.about.p1': 'Біз шикізат пен азық-түлікті ірі көлемде көтерме жеткізуге маманданамыз. Біздің миссиямыз — ТМД, Таяу Шығыс және Азия елдеріндегі өнеркәсіптік және мемлекеттік кәсіпорындар үшін жеткізу тізбегінің үздіксіздігіне кепілдік беру.',
-    'home.about.p2': 'Ірі өндірушілермен (Газпром, ҚазМұнайГаз, CNPC сияқты) тікелей келісімшарттар мен өзіміздің логистикалық сараптамамыздың арқасында біз оңтайлы бағалар мен нақты жеткізу мерзімдерін ұсынамыз.',
-    
-    // Home - Stats
+    'home.about.p1':
+      'Біз шикізат пен азық-түлікті ірі көлемде көтерме жеткізуге маманданамыз. Біздің миссиямыз — ТМД, Таяу Шығыс және Азия елдеріндегі өнеркәсіптік және мемлекеттік кәсіпорындар үшін жеткізу тізбегінің үздіксіздігіне кепілдік беру.',
+    'home.about.p2':
+      'Ірі өндірушілермен (Газпром, ҚазМұнайГаз, CNPC сияқты) тікелей келісімшарттар мен өзіміздің логистикалық сараптамамыздың арқасында біз оңтайлы бағалар мен нақты жеткізу мерзімдерін ұсынамыз.',
     'home.stats.countries': 'Экспорт елдері',
     'home.stats.tons': 'Жылына өнім тоннасы',
     'home.stats.quality': 'Сапа кепілдігі',
     'home.stats.logistics': 'Логистикалық бақылау',
-
-    // Home - Directions
     'home.dir.title': 'Біздің бағыттар',
-    'home.dir.desc': 'Серіктестеріміздің энергетикалық және азық-түлік қауіпсіздігін қамтамасыз ететін екі негізгі вектор.',
+    'home.dir.desc':
+      'Серіктестеріміздің энергетикалық және азық-түлік қауіпсіздігін қамтамасыз ететін екі негізгі вектор.',
     'home.dir.petroleum': 'Мұнай өнімдері',
-    'home.dir.petroleum.desc': 'Газ, бензин, дизель және шикі мұнай. Барлық стандарттарды сақтай отырып, жетекші МӨЗ-дерден тікелей жеткізілімдер.',
+    'home.dir.petroleum.desc':
+      'Газ, бензин, дизель және шикі мұнай. Барлық стандарттарды сақтай отырып, жетекші МӨЗ-дерден тікелей жеткізілімдер.',
     'home.dir.agro': 'Агроөнеркәсіп',
-    'home.dir.agro.desc': 'Дәнді дақылдар, ұн, майлар және қант. Азия және Таяу Шығыс елдеріне экспорттау.',
+    'home.dir.agro.desc':
+      'Дәнді дақылдар, ұн, майлар және қант. Азия және Таяу Шығыс елдеріне экспорттау.',
     'home.dir.more': 'Толығырақ',
-
-    // Home - Advantages
     'home.adv.logistics': 'Жаһандық логистика',
-    'home.adv.logistics.desc': 'Бүкіл әлем бойынша меншікті және серіктестік логистикалық тізбектер (теміржол, теңіз, авто).',
+    'home.adv.logistics.desc':
+      'Бүкіл әлем бойынша меншікті және серіктестік логистикалық тізбектер (теміржол, теңіз, авто).',
     'home.adv.quality': 'Сапаны бақылау',
-    'home.adv.quality.desc': 'Халықаралық стандарттарға сәйкестігіне тауардың әрбір партиясына қатаң аудит.',
+    'home.adv.quality.desc':
+      'Халықаралық стандарттарға сәйкестігіне тауардың әрбір партиясына қатаң аудит.',
     'home.adv.contracts': 'Тікелей келісімшарттар',
     'home.adv.contracts.desc': 'Ірі зауыттар мен агрохолдингтермен делдалсыз жұмыс істеу.',
     'home.adv.reliability': 'Сенімділік',
-    'home.adv.reliability.desc': 'Халықаралық нарықтардағы мінсіз қаржылық және заңдық бедел.',
+    'home.adv.reliability.desc':
+      'Халықаралық нарықтардағы мінсіз қаржылық және заңдық бедел.',
+    'petroleum.badge': 'Бағыт',
+    'petroleum.lead':
+      'Қауіпсіздік пен логистика бойынша халықаралық қатаң стандарттарды сақтай отырып, жоғары сапалы көмірсутектердің тікелей жеткізілімдері.',
+    'petroleum.gas.title': 'Газ',
+    'petroleum.gas.desc':
+      'Өнеркәсіптік қажеттіліктер үшін сұйытылған және табиғи газдың жоғары сапасы.',
+    'petroleum.petrol.title': 'Бензин',
+    'petroleum.petrol.desc':
+      'Еуро стандарттарына сәйкес әртүрлі маркалы автомобиль бензиндері.',
+    'petroleum.diesel.title': 'Дизель',
+    'petroleum.diesel.desc':
+      'Эксплуатацияның кез келген климаттық жағдайлары үшін сенімді дизель отыны.',
+    'petroleum.crude.title': 'Мұнай жеткізу',
+    'petroleum.crude.desc':
+      'Өрістерден тікелей шикі мұнай. Оңтайландырылған логистика.',
+    'petroleum.partners.title': 'Біздің серіктестер',
+    'petroleum.partners.subtitle': 'Мұнай-газ секторының жетекші кәсіпорындары',
+    'petroleum.infra.title': 'Инфрақұрылым және сақтау',
+    'petroleum.infra.subtitle':
+      'Қауіпсіз сақтау және тасымалдау үшін заманауи қуаттар',
+    'petroleum.alt.gas': 'Газ қоймалары',
+    'petroleum.alt.tanks': 'Теміржол цистерналары',
+    'petroleum.alt.refinery': 'Мұнай өңдеу зауыты',
+    'petroleum.alt.pipes': 'Өнеркәсіптік құбырлар',
+    'petroleum.alt.wagons': 'Мұнай тасымалдайтын вагондар',
+    'agro.badge': 'Агросектор',
+    'agro.lead':
+      'Біз дән, ұн, күнбағыс майы және соя сияқты ауыл шаруашылығы өнімдерінің ірі экспорттаушысымыз. Шикізаттың жоғары сапасын, сенімді сақтауды және халықаралық нарықтарға үздіксіз логистиканы кепілдейміз.',
+    'agro.partners.title':
+      'Дән, ұн, май және соя бойынша негізгі серіктестеріміз',
+    'agro.partners.subtitle': 'Агроөнеркәсіптік кешеннің көшбасшылары',
+    'agro.grains.title': 'Дән, ұн және соя экспорты',
+    'agro.grains.p1':
+      'Біз жоғары сапалы дәнді дақылдардың үздіксіз ірі көлемді көтерме жеткізілімдерін ұсынамыз. Ассортиментте экологиялық таза егістіктерде өсірілген барлық сорттардағы (3–4 сынып) дән бар.',
+    'agro.grains.p2':
+      'Сондай-ақ нан пісіру және кондитерлік өндіріс үшін тамаша бірінші және екінші сортты бидай ұнын экспорттаймыз. Барлық өнім қатаң сапа бақылауынан өтіп, сертификатталған.',
+    'agro.grains.p3':
+      'Соя — өңдеу (май, шрот, ақуыз) және жем-сұрақ саласы үшін ірі көлемді бұршақ. Сапа мен логистиканы келісімшарт бойынша келісеміз; бағыттар дән сияқты (Иран, Ауғанстан, БАӘ, Ирак және т.б.).',
+    'agro.soya.title': 'Соя бойынша біз қамтамасыз етеміз',
+    'agro.soya.li1': 'өңдеуші немесе трейдер талаптарына сай партияны таңдау;',
+    'agro.soya.li2': 'жөнелтуге дейін сапа және сынама бойынша ашық шарттар;',
+    'agro.soya.li3':
+      'маусым мен тасымал жүктемесін ескере отырып, келісілген мерзімдер мен маршруттар;',
+    'agro.soya.li4': 'келісімшарт пен жөнелту кезеңінде қолдау.',
+    'agro.grains.p4':
+      'Меншікті элеваторлар мен арнайы дән вагондары кез келген қашықтықта идеалды сақтау мен тасымалдауды қамтамасыз етеді.',
+    'agro.routes.title': 'Негізгі жеткізу бағыттары:',
+    'agro.route.iran': 'Иран',
+    'agro.route.afghanistan': 'Ауғанстан',
+    'agro.route.uae': 'БАӘ',
+    'agro.route.iraq': 'Ирак',
+    'agro.caption.fields': 'Экологиялық таза егістіктер',
+    'agro.caption.flour': 'Жоғары сортты ұн',
+    'agro.caption.elevators': 'Заманауи элеваторлар',
+    'agro.oils.title': 'Азық-түлік өсімдік майлары',
+    'agro.oils.p1':
+      'Рафинацияланған және рафинацияланбаған жоғары сапалы күнбағыс майын ірі көлемде жеткіземіз.',
+    'agro.oils.p2':
+      'Өнім өндіру мен құюдың барлық кезеңінде қатаң зертханалық бақылаудан өтеді — азық-түлік өнеркәсібі мен бөлшек сауда үшін тамаша таңдау.',
+    'agro.oil.f1':
+      'Халықаралық сапа стандарттарына сәйкестік (Халал, МЕМСТ)',
+    'agro.oil.f2': 'Жетекші май экстракция зауыттарынан тікелей жеткізілімдер',
+    'agro.oil.f3': 'Таяу Шығыс пен Азия елдеріне оңтайландырылған логистика',
+    'agro.alt.fields': 'Бидай егістіктері',
+    'agro.alt.flour': 'Бидай ұны',
+    'agro.alt.elevator': 'Дән элеваторлары',
+    'agro.alt.sunflower': 'Күнбағыс майы',
+    'agro.alt.oilbulk': 'Өсімдік майы көтерме',
+    'agro.alt.oilsupply': 'Май жеткізу',
+    'contact.badge': 'Байланыс',
+    'contact.title': 'Байланыс',
+    'contact.intro':
+      'Ынтымақтастық шарттарын талқылауға дайынсыз ба? Өтінім қалдырыңыз, мамандарымыз сізбен хабарласады.',
+    'contact.office': 'Кеңсе',
+    'contact.address.line1': 'Достық 20, Астана қ.',
+    'contact.address.line2': 'Қазақстан',
+    'contact.phones': 'Телефондар',
+    'contact.email': 'Email',
+    'contact.form.name': 'Атыңыз / Компания',
+    'contact.form.namePh': 'Деректерді енгізіңіз',
+    'contact.form.phone': 'Телефон',
+    'contact.form.phonePh': '+7 (___) ___ __ __',
+    'contact.form.product': 'Қызықтыратын өнім',
+    'contact.form.opt.petroleum': 'Мұнай өнімдері',
+    'contact.form.opt.agro': 'Агроөнеркәсіп',
+    'contact.form.opt.other': 'Басқа',
+    'contact.form.submit': 'Өтінім жіберу',
   },
   FA: {
-    // Navigation
+    'meta.title': 'EOA GROUP — صادرات فرآورده‌های نفتی و کشاورزی',
     'nav.home': 'خانه',
     'nav.petroleum': 'فرآورده‌های نفتی',
     'nav.agro': 'کشاورزی',
     'nav.contact': 'مخاطبین',
-    
-    // Header/Footer
     'header.phone': '+7 777 777 17 78',
+    'header.phone2': '+7 707 398 88 88',
     'footer.desc': 'تامین جهانی منابع انرژی و محصولات کشاورزی.',
     'footer.rights': '© {year} EOA GROUP. تمامی حقوق محفوظ است.',
     'footer.privacy': 'سیاست حفظ حریم خصوصی',
     'footer.terms': 'شرایط استفاده',
-
-    // Home - Hero
+    'aria.whatsapp': 'واتساپ',
+    'aria.telegram': 'تلگرام',
     'home.hero.subtitle': 'تجارت بین‌المللی',
     'home.hero.title1': 'پیوند دهنده',
     'home.hero.title2': 'بازارهای جهانی',
-    'home.hero.desc': 'EOA GROUP شریک استراتژیک شماست. ما صادرات مطمئن فرآورده‌های نفتی و کالاهای کشاورزی را تضمین می‌کنیم و تولیدکنندگان و مصرف‌کنندگان را در سراسر جهان به هم متصل می‌کنیم.',
+    'home.hero.desc':
+      'EOA GROUP شریک استراتژیک شماست. ما صادرات مطمئن فرآورده‌های نفتی و کالاهای کشاورزی را تضمین می‌کنیم و تولیدکنندگان و مصرف‌کنندگان را در سراسر جهان به هم متصل می‌کنیم.',
     'home.hero.btn': 'همکاری',
-
-    // Home - About
     'home.about.title': 'درباره شرکت EOA GROUP',
-    'home.about.p1': 'ما در تامین عمده مواد اولیه و مواد غذایی تخصص داریم. ماموریت ما تضمین زنجیره تامین بدون وقفه برای شرکت‌های صنعتی و دولتی در کشورهای مستقل مشترک المنافع، خاورمیانه و آسیا است.',
-    'home.about.p2': 'به لطف قراردادهای مستقیم با تولیدکنندگان بزرگ (مانند گازپروم، کازمونای‌گاز، CNPC) و تخصص لجستیکی خودمان، قیمت‌های بهینه و زمان‌بندی دقیق تحویل را ارائه می‌دهیم.',
-    
-    // Home - Stats
+    'home.about.p1':
+      'ما در تامین عمده مواد اولیه و مواد غذایی تخصص داریم. ماموریت ما تضمین زنجیره تامین بدون وقفه برای شرکت‌های صنعتی و دولتی در کشورهای مستقل مشترک المنافع، خاورمیانه و آسیا است.',
+    'home.about.p2':
+      'به لطف قراردادهای مستقیم با تولیدکنندگان بزرگ (مانند گازپروم، کازمونای‌گاز، CNPC) و تخصص لجستیکی خودمان، قیمت‌های بهینه و زمان‌بندی دقیق تحویل را ارائه می‌دهیم.',
     'home.stats.countries': 'کشورهای صادراتی',
     'home.stats.tons': 'تن محصول در سال',
     'home.stats.quality': 'تضمین کیفیت',
     'home.stats.logistics': 'کنترل لجستیک',
-
-    // Home - Directions
     'home.dir.title': 'مسیرهای ما',
-    'home.dir.desc': 'دو بردار کلیدی که امنیت انرژی و غذایی شرکای ما را تضمین می‌کنند.',
+    'home.dir.desc':
+      'دو بردار کلیدی که امنیت انرژی و غذایی شرکای ما را تضمین می‌کنند.',
     'home.dir.petroleum': 'فرآورده‌های نفتی',
-    'home.dir.petroleum.desc': 'گاز، بنزین، گازوئیل و نفت خام. تامین مستقیم از پالایشگاه‌های پیشرو با رعایت تمامی استانداردها.',
+    'home.dir.petroleum.desc':
+      'گاز، بنزین، گازوئیل و نفت خام. تامین مستقیم از پالایشگاه‌های پیشرو با رعایت تمامی استانداردها.',
     'home.dir.agro': 'کشاورزی',
-    'home.dir.agro.desc': 'غلات، آرد، روغن‌ها و شکر. صادرات به کشورهای آسیا و خاورمیانه.',
+    'home.dir.agro.desc':
+      'غلات، آرد، روغن‌ها و شکر. صادرات به کشورهای آسیا و خاورمیانه.',
     'home.dir.more': 'بیشتر بخوانید',
-
-    // Home - Advantages
     'home.adv.logistics': 'لجستیک جهانی',
-    'home.adv.logistics.desc': 'زنجیره‌های لجستیکی اختصاصی و مشارکتی (ریلی، دریایی، جاده‌ای) در سراسر جهان.',
+    'home.adv.logistics.desc':
+      'زنجیره‌های لجستیکی اختصاصی و مشارکتی (ریلی، دریایی، جاده‌ای) در سراسر جهان.',
     'home.adv.quality': 'کنترل کیفیت',
-    'home.adv.quality.desc': 'حسابرسی دقیق هر محموله کالا برای انطباق با استانداردهای بین‌المللی.',
+    'home.adv.quality.desc':
+      'حسابرسی دقیق هر محموله کالا برای انطباق با استانداردهای بین‌المللی.',
     'home.adv.contracts': 'قراردادهای مستقیم',
-    'home.adv.contracts.desc': 'کار بدون واسطه با کارخانه‌های بزرگ و هلدینگ‌های کشاورزی.',
+    'home.adv.contracts.desc':
+      'کار بدون واسطه با کارخانه‌های بزرگ و هلدینگ‌های کشاورزی.',
     'home.adv.reliability': 'قابلیت اطمینان',
-    'home.adv.reliability.desc': 'اعتبار مالی و حقوقی بی‌نقص در بازارهای بین‌المللی.',
-  }
+    'home.adv.reliability.desc':
+      'اعتبار مالی و حقوقی بی‌نقص در بازارهای بین‌المللی.',
+    'petroleum.badge': 'حوزه فعالیت',
+    'petroleum.lead':
+      'تامین مستقیم هیدروکربن‌های باکیفیت با رعایت استانداردهای بین‌المللی ایمنی و لجستیک.',
+    'petroleum.gas.title': 'گاز',
+    'petroleum.gas.desc': 'گاز طبیعی و ال‌ان‌جی درجه یک برای نیازهای صنعتی.',
+    'petroleum.petrol.title': 'بنزین',
+    'petroleum.petrol.desc': 'بنزین خودرو مطابق استانداردهای یورو.',
+    'petroleum.diesel.title': 'گازوئیل',
+    'petroleum.diesel.desc': 'سوخت دیزل مطمئن برای هر شرایط آب‌وهوا و بهره‌برداری.',
+    'petroleum.crude.title': 'تامین نفت خام',
+    'petroleum.crude.desc': 'نفت خام مستقیم از میادین. لجستیک بهینه.',
+    'petroleum.partners.title': 'شرکای ما',
+    'petroleum.partners.subtitle': 'شرکت‌های پیشرو نفت و گاز',
+    'petroleum.infra.title': 'زیرساخت و انبارداری',
+    'petroleum.infra.subtitle': 'ظرفیت‌های مدرن برای ذخیره‌سازی و حمل ایمن',
+    'petroleum.alt.gas': 'مخازن گاز',
+    'petroleum.alt.tanks': 'واگن‌های تانکر ریلی',
+    'petroleum.alt.refinery': 'پالایشگاه نفت',
+    'petroleum.alt.pipes': 'خطوط لوله صنعتی',
+    'petroleum.alt.wagons': 'واگن حمل نفت',
+    'agro.badge': 'بخش کشاورزی',
+    'agro.lead':
+      'ما از بزرگ‌ترین صادرکنندگان محصولات کشاورزی هستیم: غلات، آرد، روغن آفتابگردان و سویا. کیفیت مواد اولیه، ذخیره‌سازی مطمئن و لجستیک بدون وقفه به بازارهای جهانی را تضمین می‌کنیم.',
+    'agro.partners.title': 'شرکای کلیدی در غلات، آرد، روغن و سویا',
+    'agro.partners.subtitle': 'رهبران بخش کشاورزی و صنعتی',
+    'agro.grains.title': 'صادرات غلات، آرد و سویا',
+    'agro.grains.p1':
+      'تامین عمده بدون وقفه غلات باکیفیت را ارائه می‌دهیم. محدوده ما شامل همه درجه‌ها (کلاس ۳–۴) کشت‌شده در مزارع پاک است.',
+    'agro.grains.p2':
+      'همچنین آرد گندم درجه یک و دو مناسب نانوایی و شیرینی‌پزی صادر می‌کنیم. همه محصولات کنترل کیفیت سخت و گواهی دارند.',
+    'agro.grains.p3':
+      'سویا — تامین عمده دانه برای فرآوری (روغن، کنجاله، پروتئین) و صنعت خوراک. کیفیت و لجستیک طبق قرارداد هماهنگ می‌شود؛ مقصدها مانند غلات (ایران، افغانستان، امارات، عراق و غیره).',
+    'agro.soya.title': 'برای سویا ما تضمین می‌کنیم',
+    'agro.soya.li1': 'انتخاب محموله مطابق نیاز فرآیندگر یا تریدر؛',
+    'agro.soya.li2': 'شرایط شفاف کیفیت و نمونه‌برداری پیش از بارگیری؛',
+    'agro.soya.li3': 'زمان‌بندی و مسیرهای هماهنگ با فصل و ظرفیت حمل؛',
+    'agro.soya.li4': 'پشتیبانی در مراحل قرارداد و بارگیری.',
+    'agro.grains.p4':
+      'سیلوهای اختصاصی و واگن‌های تخصصی حمل غله شرایط ایده‌آل ذخیره و حمل در هر فاصله را فراهم می‌کنند.',
+    'agro.routes.title': 'مقاصد اصلی تامین:',
+    'agro.route.iran': 'ایران',
+    'agro.route.afghanistan': 'افغانستان',
+    'agro.route.uae': 'امارات',
+    'agro.route.iraq': 'عراق',
+    'agro.caption.fields': 'مزارع پاک',
+    'agro.caption.flour': 'آرد درجه عالی',
+    'agro.caption.elevators': 'سیلوهای مدرن',
+    'agro.oils.title': 'روغن‌های گیاهی خوراکی',
+    'agro.oils.p1':
+      'تامین عمده روغن آفتابگردان تصفیه‌شده و تصفیه‌نشده با بالاترین کیفیت.',
+    'agro.oils.p2':
+      'محصولات در تمام مراحل تولید و بسته‌بندی تحت کنترل آزمایشگاهی سخت قرار می‌گیرند — انتخابی ایده‌آل برای صنعت غذا و توزیع خرده‌فروشی.',
+    'agro.oil.f1': 'انطباق با استانداردهای بین‌المللی کیفیت (حلال، GOST)',
+    'agro.oil.f2': 'تامین مستقیم از بزرگ‌ترین کارخانه‌های استخراج روغن',
+    'agro.oil.f3': 'لجستیک بهینه به کشورهای خاورمیانه و آسیا',
+    'agro.alt.fields': 'مزارع گندم',
+    'agro.alt.flour': 'آرد گندم',
+    'agro.alt.elevator': 'سیلوهای غله',
+    'agro.alt.sunflower': 'روغن آفتابگردان',
+    'agro.alt.oilbulk': 'روغن گیاهی عمده',
+    'agro.alt.oilsupply': 'تامین روغن',
+    'contact.badge': 'تماس با ما',
+    'contact.title': 'مخاطبین',
+    'contact.intro':
+      'آماده بحث درباره همکاری هستید؟ درخواست بگذارید تا کارشناسان ما با شما تماس بگیرند.',
+    'contact.office': 'دفتر',
+    'contact.address.line1': 'دوستیق ۲۰، آستانه',
+    'contact.address.line2': 'قزاقستان',
+    'contact.phones': 'تلفن‌ها',
+    'contact.email': 'ایمیل',
+    'contact.form.name': 'نام شما / شرکت',
+    'contact.form.namePh': 'اطلاعات را وارد کنید',
+    'contact.form.phone': 'تلفن',
+    'contact.form.phonePh': '+7 (___) ___ __ __',
+    'contact.form.product': 'محصول مورد علاقه',
+    'contact.form.opt.petroleum': 'فرآورده‌های نفتی',
+    'contact.form.opt.agro': 'کشاورزی',
+    'contact.form.opt.other': 'سایر',
+    'contact.form.submit': 'ارسال درخواست',
+  },
 };

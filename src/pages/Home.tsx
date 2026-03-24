@@ -47,7 +47,7 @@ export default function Home() {
             >
               <div className="h-[1px] w-12 bg-[#C5A059]"></div>
               <span className="text-[#C5A059] uppercase tracking-[0.2em] text-sm font-semibold">
-                {t('home.hero.subtitle')}
+                {t("home.hero.subtitle")}
               </span>
             </motion.div>
 
@@ -55,9 +55,9 @@ export default function Home() {
               variants={fadeUp}
               className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-serif font-bold text-white tracking-tight leading-[1.1] mb-8"
             >
-              {t('home.hero.title1')} <br />
+              {t("home.hero.title1")} <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#C5A059] to-[#E8D08D]">
-                {t('home.hero.title2')}
+                {t("home.hero.title2")}
               </span>
             </motion.h1>
 
@@ -65,7 +65,7 @@ export default function Home() {
               variants={fadeUp}
               className="text-lg md:text-xl text-gray-400 font-light max-w-2xl mb-12 leading-relaxed"
             >
-              {t('home.hero.desc')}
+              {t("home.hero.desc")}
             </motion.p>
 
             <motion.div
@@ -77,7 +77,7 @@ export default function Home() {
                 className="group relative inline-flex items-center justify-center px-8 py-4 bg-[#C5A059] text-[#0B1221] font-semibold text-sm uppercase tracking-wider overflow-hidden rounded-sm"
               >
                 <span className="relative z-10 flex items-center space-x-2">
-                  <span>{t('home.hero.btn')}</span>
+                  <span>{t("home.hero.btn")}</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </span>
                 <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 ease-out"></div>
@@ -102,7 +102,7 @@ export default function Home() {
                 variants={fadeUp}
                 className="text-3xl md:text-5xl font-serif font-bold text-[#0B1221] tracking-tight mb-6"
               >
-                {t('home.about.title')}
+                {t("home.about.title")}
               </motion.h2>
               <motion.div
                 variants={fadeUp}
@@ -112,13 +112,13 @@ export default function Home() {
                 variants={fadeUp}
                 className="text-lg text-gray-600 font-light leading-relaxed mb-6"
               >
-                {t('home.about.p1')}
+                {t("home.about.p1")}
               </motion.p>
               <motion.p
                 variants={fadeUp}
                 className="text-lg text-gray-600 font-light leading-relaxed"
               >
-                {t('home.about.p2')}
+                {t("home.about.p2")}
               </motion.p>
             </motion.div>
 
@@ -130,10 +130,10 @@ export default function Home() {
               className="grid grid-cols-2 gap-6"
             >
               {[
-                { number: "15+", label: t('home.stats.countries') },
-                { number: "1M+", label: t('home.stats.tons') },
-                { number: "100%", label: t('home.stats.quality') },
-                { number: "24/7", label: t('home.stats.logistics') },
+                { number: "15+", label: t("home.stats.countries") },
+                { number: "300k+", label: t("home.stats.tons") },
+                { number: "100%", label: t("home.stats.quality") },
+                { number: "24/7", label: t("home.stats.logistics") },
               ].map((stat, idx) => (
                 <motion.div
                   key={idx}
@@ -164,10 +164,10 @@ export default function Home() {
             className="text-center mb-16"
           >
             <h2 className="text-3xl md:text-5xl font-serif font-bold text-white tracking-tight mb-4">
-              {t('home.dir.title')}
+              {t("home.dir.title")}
             </h2>
             <p className="text-gray-400 font-light text-lg max-w-2xl mx-auto">
-              {t('home.dir.desc')}
+              {t("home.dir.desc")}
             </p>
           </motion.div>
 
@@ -191,16 +191,16 @@ export default function Home() {
                   <Flame className="w-7 h-7 text-[#0B1221]" />
                 </div>
                 <h3 className="text-2xl md:text-4xl font-serif font-bold text-white mb-4">
-                  {t('home.dir.petroleum')}
+                  {t("home.dir.petroleum")}
                 </h3>
                 <p className="text-gray-300 font-light mb-8 max-w-md">
-                  {t('home.dir.petroleum.desc')}
+                  {t("home.dir.petroleum.desc")}
                 </p>
                 <Link
                   to="/petroleum"
                   className="inline-flex items-center space-x-2 text-[#C5A059] hover:text-white transition-colors font-medium uppercase tracking-wider text-sm"
                 >
-                  <span>{t('home.dir.more')}</span>
+                  <span>{t("home.dir.more")}</span>
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
@@ -225,16 +225,16 @@ export default function Home() {
                   <Wheat className="w-7 h-7 text-[#0B1221]" />
                 </div>
                 <h3 className="text-2xl  md:text-4xl font-serif font-bold text-white mb-4">
-                  {t('home.dir.agro')}
+                  {t("home.dir.agro")}
                 </h3>
                 <p className="text-gray-300 font-light mb-8 max-w-md">
-                  {t('home.dir.agro.desc')}
+                  {t("home.dir.agro.desc")}
                 </p>
                 <Link
                   to="/agro"
                   className="inline-flex items-center space-x-2 text-[#C5A059] hover:text-white transition-colors font-medium uppercase tracking-wider text-sm"
                 >
-                  <span>{t('home.dir.more')}</span>
+                  <span>{t("home.dir.more")}</span>
                   <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
@@ -256,23 +256,23 @@ export default function Home() {
             {[
               {
                 icon: Globe,
-                title: t('home.adv.logistics'),
-                desc: t('home.adv.logistics.desc'),
+                title: t("home.adv.logistics"),
+                desc: t("home.adv.logistics.desc"),
               },
               {
                 icon: ShieldCheck,
-                title: t('home.adv.quality'),
-                desc: t('home.adv.quality.desc'),
+                title: t("home.adv.quality"),
+                desc: t("home.adv.quality.desc"),
               },
               {
                 icon: Handshake,
-                title: t('home.adv.contracts'),
-                desc: t('home.adv.contracts.desc'),
+                title: t("home.adv.contracts"),
+                desc: t("home.adv.contracts.desc"),
               },
               {
                 icon: Award,
-                title: t('home.adv.reliability'),
-                desc: t('home.adv.reliability.desc'),
+                title: t("home.adv.reliability"),
+                desc: t("home.adv.reliability.desc"),
               },
             ].map((item, idx) => (
               <motion.div

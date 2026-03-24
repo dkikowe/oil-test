@@ -9,14 +9,30 @@ import {
   Truck,
 } from "lucide-react";
 import { fadeUp, staggerContainer } from "../utils/animations";
+import { useLanguage } from "../i18n/LanguageContext";
 
 export default function Agro() {
+  const { t } = useLanguage();
+
   const partners = [
     "РусАгро",
     "Шымкент май",
     "Агропорт",
     "Агро групп",
     "KRYSTAN TURAN",
+  ];
+
+  const routeKeys = [
+    "agro.route.iran",
+    "agro.route.afghanistan",
+    "agro.route.uae",
+    "agro.route.iraq",
+  ] as const;
+
+  const oilFeatures = [
+    { icon: ShieldCheck, key: "agro.oil.f1" as const },
+    { icon: Factory, key: "agro.oil.f2" as const },
+    { icon: Truck, key: "agro.oil.f3" as const },
   ];
 
   return (
@@ -35,7 +51,6 @@ export default function Agro() {
       `}</style>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12">
-        {/* Header Section */}
         <motion.div
           initial="hidden"
           animate="visible"
@@ -45,27 +60,24 @@ export default function Agro() {
           <div className="flex items-center justify-center md:justify-start space-x-4 mb-4">
             <div className="h-[1px] w-12 bg-[#C5A059]"></div>
             <span className="text-[#C5A059] uppercase tracking-[0.2em] text-sm font-semibold">
-              Агросектор
+              {t("agro.badge")}
             </span>
           </div>
           <h1 className="text-3xl sm:text-4xl md:text-6xl font-serif font-bold text-[#0B1221] tracking-tight mb-6 break-words">
-            Агропромышленность
+            {t("nav.agro")}
           </h1>
           <p className="text-base sm:text-lg text-gray-600 max-w-3xl font-light leading-relaxed mx-auto md:mx-0">
-            Мы являемся крупнейшим экспортером сельскохозяйственной продукции.
-            Гарантируем высокое качество сырья, надежное хранение и
-            бесперебойную логистику на международные рынки.
+            {t("agro.lead")}
           </p>
         </motion.div>
 
-        {/* Partners Marquee */}
         <div className="mb-24">
           <div className="text-center mb-10">
             <h3 className="text-xl md:text-2xl font-serif font-bold text-[#0B1221]">
-              Наши ключевые партнеры по зерну, муке и маслу
+              {t("agro.partners.title")}
             </h3>
             <p className="text-gray-500 mt-2 font-light">
-              Лидеры агропромышленного комплекса
+              {t("agro.partners.subtitle")}
             </p>
           </div>
           <div className="relative overflow-hidden w-full bg-white py-8 border-y border-gray-200 flex">
@@ -97,7 +109,6 @@ export default function Agro() {
           </div>
         </div>
 
-        {/* Grains & Flour Section */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-32">
           <motion.div
             initial="hidden"
@@ -115,22 +126,27 @@ export default function Agro() {
               variants={fadeUp}
               className="text-3xl md:text-4xl font-serif font-bold text-[#0B1221] tracking-tight mb-6"
             >
-              Экспорт зерна и муки
+              {t("agro.grains.title")}
             </motion.h2>
             <motion.div
               variants={fadeUp}
               className="prose prose-lg text-gray-600 font-light mb-8"
             >
-              <p>
-                Мы предлагаем бесперебойные крупнооптовые поставки высококачественных зерновых культур. 
-                В нашем ассортименте представлено <strong>зерно всех сортов (3-4 класс)</strong>, выращенное на экологически чистых полях.
-              </p>
-              <p>
-                Также мы экспортируем <strong>пшеничную муку первого и второго сорта</strong>, которая идеально подходит для хлебопекарного и кондитерского производств. Вся продукция проходит строгий контроль качества и сертифицирована.
-              </p>
-              <p>
-                Собственные элеваторы и специализированные вагоны-зерновозы позволяют нам обеспечивать идеальные условия хранения и транспортировки на любые расстояния.
-              </p>
+              <p>{t("agro.grains.p1")}</p>
+              <p>{t("agro.grains.p2")}</p>
+              <p>{t("agro.grains.p3")}</p>
+              <div className="not-prose border border-[#C5A059]/30 bg-slate-50 rounded-sm p-5 my-6">
+                <p className="text-sm font-semibold text-[#0B1221] uppercase tracking-wider mb-3">
+                  {t("agro.soya.title")}
+                </p>
+                <ul className="text-gray-600 font-light text-[15px] space-y-2 list-disc list-inside">
+                  <li>{t("agro.soya.li1")}</li>
+                  <li>{t("agro.soya.li2")}</li>
+                  <li>{t("agro.soya.li3")}</li>
+                  <li>{t("agro.soya.li4")}</li>
+                </ul>
+              </div>
+              <p>{t("agro.grains.p4")}</p>
             </motion.div>
 
             <motion.div
@@ -139,15 +155,15 @@ export default function Agro() {
             >
               <h4 className="font-bold text-[#0B1221] mb-4 flex items-center justify-center md:justify-start gap-2">
                 <MapPin className="w-5 h-5 text-[#C5A059]" />
-                Основные направления поставок:
+                {t("agro.routes.title")}
               </h4>
               <div className="flex flex-wrap justify-center md:justify-start gap-3">
-                {["Иран", "Афганистан", "ОАЭ", "Ирак"].map((country) => (
+                {routeKeys.map((key) => (
                   <span
-                    key={country}
+                    key={key}
                     className="bg-[#F9FAFB] border border-gray-200 px-4 py-2 rounded-sm text-sm font-medium text-gray-700 uppercase tracking-wider"
                   >
-                    {country}
+                    {t(key)}
                   </span>
                 ))}
               </div>
@@ -164,46 +180,45 @@ export default function Agro() {
             <div className="relative h-[250px] rounded-sm overflow-hidden group col-span-2">
               <img
                 src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=2064&auto=format&fit=crop"
-                alt="Пшеничные поля"
+                alt={t("agro.alt.fields")}
                 className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0B1221]/80 via-transparent to-transparent"></div>
               <div className="absolute bottom-6 left-6">
                 <span className="text-white font-medium tracking-wide">
-                  Экологически чистые поля
+                  {t("agro.caption.fields")}
                 </span>
               </div>
             </div>
             <div className="relative h-[200px] rounded-sm overflow-hidden group">
               <img
                 src="https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=2072&auto=format&fit=crop"
-                alt="Пшеничная мука"
+                alt={t("agro.alt.flour")}
                 className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0B1221]/80 via-transparent to-transparent"></div>
               <div className="absolute bottom-6 left-6">
                 <span className="text-white font-medium tracking-wide">
-                  Мука высших сортов
+                  {t("agro.caption.flour")}
                 </span>
               </div>
             </div>
             <div className="relative h-[200px] rounded-sm overflow-hidden group">
               <img
                 src="/elevator.jpeg"
-                alt="Зерновые элеваторы"
+                alt={t("agro.alt.elevator")}
                 className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#0B1221]/80 via-transparent to-transparent"></div>
               <div className="absolute bottom-6 left-6">
                 <span className="text-white font-medium tracking-wide">
-                  Современные элеваторы
+                  {t("agro.caption.elevators")}
                 </span>
               </div>
             </div>
           </motion.div>
         </div>
 
-        {/* Oils Section */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
           <motion.div
             initial={{ opacity: 0, x: -40 }}
@@ -215,21 +230,21 @@ export default function Agro() {
             <div className="relative h-[400px] rounded-sm overflow-hidden group col-span-2">
               <img
                 src="/oil.jpg"
-                alt="Подсолнечное масло"
+                alt={t("agro.alt.sunflower")}
                 className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
               />
             </div>
             <div className="relative h-[250px] rounded-sm overflow-hidden group">
               <img
                 src="/oil1.jpeg"
-                alt="Растительное масло оптом"
+                alt={t("agro.alt.oilbulk")}
                 className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
               />
             </div>
             <div className="relative h-[250px] rounded-sm overflow-hidden group">
               <img
                 src="/oil2.jpg"
-                alt="Поставка масла"
+                alt={t("agro.alt.oilsupply")}
                 className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
               />
             </div>
@@ -252,46 +267,25 @@ export default function Agro() {
               variants={fadeUp}
               className="text-3xl md:text-4xl font-serif font-bold text-[#0B1221] tracking-tight mb-6"
             >
-              Пищевые растительные масла
+              {t("agro.oils.title")}
             </motion.h2>
             <motion.div
               variants={fadeUp}
               className="prose prose-lg text-gray-600 font-light mb-8"
             >
-              <p>
-                Осуществляем крупнооптовые поставки рафинированного и
-                нерафинированного подсолнечного масла высшего качества.
-              </p>
-              <p>
-                Наша продукция проходит строгий лабораторный контроль на всех
-                этапах производства и розлива, что делает её идеальным выбором
-                как для пищевой промышленности, так и для дистрибуции в
-                розничные сети.
-              </p>
+              <p>{t("agro.oils.p1")}</p>
+              <p>{t("agro.oils.p2")}</p>
             </motion.div>
 
             <motion.div variants={fadeUp} className="space-y-4">
-              {[
-                {
-                  icon: ShieldCheck,
-                  text: "Соответствие международным стандартам качества (Халал, ГОСТ)",
-                },
-                {
-                  icon: Factory,
-                  text: "Прямые поставки с ведущих маслоэкстракционных заводов",
-                },
-                {
-                  icon: Truck,
-                  text: "Оптимизированная логистика в страны Ближнего Востока и Азии",
-                },
-              ].map((feature, idx) => (
+              {oilFeatures.map((feature, idx) => (
                 <div
                   key={idx}
                   className="flex items-start gap-4 bg-white p-4 border border-gray-100 rounded-sm shadow-sm"
                 >
                   <feature.icon className="w-6 h-6 text-[#C5A059] flex-shrink-0 mt-0.5" />
                   <span className="text-gray-700 font-medium text-sm leading-relaxed">
-                    {feature.text}
+                    {t(feature.key)}
                   </span>
                 </div>
               ))}
